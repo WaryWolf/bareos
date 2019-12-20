@@ -170,6 +170,9 @@ macro(prepare_test)
   file(MAKE_DIRECTORY ${tmpdir})
   file(MAKE_DIRECTORY ${working_dir})
   file(MAKE_DIRECTORY ${config_directory_dir_additional_test_config})
+
+  set(piddir ${current_test_directory}/piddir)
+  file(MAKE_DIRECTORY ${piddir})
 endmacro()
 
 # extract  db version from cats.h
@@ -243,9 +246,6 @@ set(tmpdir ${tmp})
 set(tmpsrc ${PROJECT_BINARY_DIR}/tmpsrc)
 set(working ${PROJECT_BINARY_DIR}/working)
 set(working_dir ${PROJECT_BINARY_DIR}/working)
-
-set(piddir ${PROJECT_BINARY_DIR}/piddir)
-file(MAKE_DIRECTORY ${piddir})
 
 # set(BASEPORT ${dir_port})
 
